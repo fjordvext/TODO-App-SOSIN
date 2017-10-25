@@ -23,4 +23,5 @@ INSERT INTO todo (task, status, category, importance, comp) VALUES
 ('Fix back to deck bug in Zimi',
 'Delay',
 'Coding',
-6)
+6,
+'False')

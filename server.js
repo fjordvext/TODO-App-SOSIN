@@ -2,8 +2,10 @@ const express = require('express');
 const logger = require('morgan');
 const path = require('path');
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 
 const app = express();
+app.use(methodOverride('_method'))
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
@@ -18,12 +20,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-const todoRoutes = require('./routes/todo-routes');
 
 app.get('/', (req, res) => {
   res.redirect('/todo');
 });
 
+const todoRoutes = require('./routes/todo-routes');
 app.use('/todo', todoRoutes);
 
 app.get('*', (req, res) => {
