@@ -1,0 +1,107 @@
+h1 {
+font-family: 'Raleway', sans-serif;
+font-size: 80px;
+}
+
+h2{
+font-family: 'Raleway', sans-serif;
+font-size: 40px;
+}
+
+h3 {
+font-family: 'Raleway', sans-serif;
+font-size: 20px;
+}
+
+p {
+font-family: 'Merriweather', serif;
+font-size: 16px;
+}
+
+a{
+font-family: 'Raleway', sans-serif;
+font-size: 16px;
+}
+
+nav {
+font-family: 'Raleway', sans-serif;
+font-size: 16px;
+}
+
+button {
+font-family: 'Raleway', sans-serif;
+font-size: 16px;
+}
+
+.main-title {
+font-weight: bolder;
+}
+
+.start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100px;
+  background: #38FF47
+  border: solid 2px #E8C936;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  flex: 0 150px;
+  background: #4D6D7F;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  background: #9ADBFF;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  order: 2;
+  flex: 3;
+  background: #9ADBFF;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+aside {
+  flex: 0 300px;
+}
+
+footer {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.left {
+  order: 1;
+}
+
+.right {
+  order: 3;
+}
+
+@media screen and (max-width: 1025px) {
+  main {
+    flex-direction: column;
+  }
+
+  article {
+    order: 0;
+  }
+
+  aside {
+    flex: 0;
+  }
+}
